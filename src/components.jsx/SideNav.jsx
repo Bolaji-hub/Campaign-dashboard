@@ -11,7 +11,7 @@ import plus from "../assets/Plus.svg";
 const SideNav = () => {
   return (
     <nav className="min-h-screen p-4 bg-[#1D1042] w-80 text-white sticky left-0 top-0 flex flex-col">
-      <button className="flex gap-2 bg-purple-1 text-white items-center text-xl p-4 rounded-md   ">
+      <button className="flex gap-2 bg-purple-1 text-white items-center text-lg p-4 rounded-md font-thin">
         <img src={Lightning} />
         Welcome Keerthi
       </button>
@@ -90,7 +90,7 @@ const SideNav = () => {
           </a>
         </li>
       </ul>
-      <button className="flex gap-2 bg-purple-1 items-center text-xl p-4 rounded-md mt-auto">
+      <button className="flex gap-2 bg-purple-1 items-center text-lg p-4 rounded-md mt-auto font-thin">
         <img src={plus} />
         NEW PROJECTS
       </button>
