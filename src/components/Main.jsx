@@ -145,7 +145,7 @@ function Progress({ value }) {
         "--color": color,
         "--progress": `${value * 100}%`,
       }}
-      className="h-2 rounded bg-gray-200 before:h-full before:block before:rounded before:w-[var(--progress)] before:bg-[var(--color)]"
+      className="my-2 h-2 rounded bg-gray-200 before:h-full before:block before:rounded before:w-[var(--progress)] before:bg-[var(--color)]"
     ></div>
   );
 }
