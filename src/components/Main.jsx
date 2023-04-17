@@ -71,7 +71,7 @@ const Main = () => {
   );
 
   return (
-    <main className="container py-16 grid grid-cols-3 gap-10">
+    <main className="container py-16 grid grid-cols-3 gap-6">
       {[
         { id: "to-do", label: "To Do" },
         { id: "in-progress", label: "InProgress" },
@@ -107,8 +107,8 @@ export default Main;
 
 const Item = ({ item, className }) => {
   return (
-    <div className={className + " bg-white rounded-xl  p-4"}>
-      {item.img && <img src={item.img} />}
+    <div className={className + " bg-white rounded-xl p-4"}>
+      {item.img && <img className="w-full" src={item.img} />}
       <div className="flex justify-between items-center mt-4 mb-2">
         <h6 className="text-[#000000] font-semibold">{item.title}</h6>
         <img src={vector26} />
