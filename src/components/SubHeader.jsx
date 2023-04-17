@@ -8,7 +8,7 @@ import cross from "../assets/Cross.svg";
 
 const SubHeader = () => {
   return (
-    <nav className="flex items-center pt-6">
+    <nav className="flex items-center">
       <img src={image} className="rounded-full" />
       <img src={image} className="rounded-full border-white -ml-2 " />
       <img src={image} className="rounded-full border-white -ml-2 " />
