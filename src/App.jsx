@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="flex">
       <SideNav />
-      <main className="flex-1 bg-[#FCFBFC]">
+      <main className="flex-1 bg-[#FCFBFC] max-h-screen overflow-auto">
         <Header />
         <Main />
       </main>

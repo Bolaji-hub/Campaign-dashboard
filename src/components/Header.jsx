@@ -3,7 +3,7 @@ import SubHeader from "./SubHeader";
 
 const Header = () => {
   return (
-    <div className="bg-white py-5">
+    <div className="bg-white py-5 sticky top-0 z-10">
       <div className="container">
         <div>
           <div className="flex justify-space-between items-center mt-4">
