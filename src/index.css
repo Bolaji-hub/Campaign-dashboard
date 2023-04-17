@@ -9,3 +9,12 @@
     font-family: "Inter", sans-serif;
   }
 }
+
+.container {
+  padding-left: clamp(0.5rem, 3vw, 10rem);
+  padding-right: clamp(0.5rem, 3vw, 10rem);
+  max-width: clamp(800px, 90%, 1400px);
+  margin: auto;
+
+  flex: 1;
+}

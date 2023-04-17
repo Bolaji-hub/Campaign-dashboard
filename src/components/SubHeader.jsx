@@ -8,10 +8,10 @@ import cross from "../assets/Cross.svg";
 
 const SubHeader = () => {
   return (
-    <nav className="flex mx-10 items-center pt-6">
-      <img src={image} className="rounded-full -m-2 " />
-      <img src={image} className="rounded-full -mr-2" />
+    <nav className="flex items-center pt-6">
       <img src={image} className="rounded-full" />
+      <img src={image} className="rounded-full -ml-2" />
+      <img src={image} className="rounded-full -ml-2" />
       <p className="text-[#B8B9BD] font-light text-sm ml-2 ">8 member</p>
       <ul className="flex ml-auto gap-4 text-[#7D8088] font-light text-sm">
         <li className="hover:text-black duration-500">
