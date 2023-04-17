@@ -5,6 +5,9 @@ import comment from "../assets/Vector24.svg";
 import vector25 from "../assets/Vector25.svg";
 import image8 from "../assets/image8.svg";
 import vector26 from "../assets/Vector26.svg";
+import card1 from "../assets/card1.png";
+import card2 from "../assets/card2.png";
+import card3 from "../assets/card3.png";
 
 const items = [
   {
@@ -12,7 +15,7 @@ const items = [
     status: "to-do",
     title: "Highfidelity Design",
     description: "Make clear design and color",
-    img: "/src/assets/card1.png",
+    img: card1,
     progress: 0,
     commentCount: 7,
     linkCount: 2,
@@ -31,7 +34,7 @@ const items = [
     status: "in-progress",
     title: "Highfidelity Design",
     description: "Make clear design and color",
-    img: "/src/assets/card2.png",
+    img: card2,
     progress: 7,
     commentCount: 7,
     linkCount: 2,
@@ -50,7 +53,7 @@ const items = [
     status: "completed",
     title: "Highfidelity Design",
     description: "Make clear design and color",
-    img: "/src/assets/card3.png",
+    img: card3,
     progress: 10,
     commentCount: 7,
     linkCount: 2,
