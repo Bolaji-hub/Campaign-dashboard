@@ -119,15 +119,19 @@ const Item = ({ item, className }) => {
         <p className="flex relative gap-2 text-[#B8B9BD] font-light text-sm mt-3 ">
           <img src={mark} />
           Progress
-          <span className="text-md font-normal ml-auto text-black">2/10</span>
+          <span className="text-md font-normal ml-auto text-black">
+            {item.progress}/10
+          </span>
         </p>
         <Progress value={item.progress / 10} />
         <div className="flex text-[#B8B9BD] gap-3">
           <p className="flex gap-1 font-light text-sm mt-1">
-            <img src={comment} />7
+            <img src={comment} />
+            {item.commentCount}
           </p>
           <p className="flex gap-1 font-light text-sm mt-1">
-            <img src={vector25} />2
+            <img src={vector25} />
+            {item.linkCount}
           </p>
           <img src={image8} className="rounded-full -mr-4 ml-auto" />
           <img src={image8} className="rounded-full -mr-4" />
