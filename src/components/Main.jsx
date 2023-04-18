@@ -134,8 +134,14 @@ const Item = ({ item, className }) => {
             {item.linkCount}
           </p>
           <img src={image8} className="rounded-full -mr-4 ml-auto" />
-          <img src={image8} className="rounded-full -mr-4" />
-          <img src={image8} className="rounded-full -mr-1" />
+          <img
+            src={image8}
+            className="rounded-full -mr-4 border border-solid border-white"
+          />
+          <img
+            src={image8}
+            className="rounded-full -mr-1 border border-solid border-white"
+          />
         </div>
       </div>
     </div>
