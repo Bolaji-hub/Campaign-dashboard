@@ -5,9 +5,9 @@ import comment from "../assets/Vector24.svg";
 import vector25 from "../assets/Vector25.svg";
 import image8 from "../assets/image8.svg";
 import vector26 from "../assets/Vector26.svg";
-import card1 from "../assets/card1.png";
-import card2 from "../assets/card2.png";
-import card3 from "../assets/card3.png";
+import card1 from "../assets/card1.jpg";
+import card2 from "../assets/card2.jpg";
+import card3 from "../assets/card3.jpg";
 
 const items = [
   {
@@ -78,13 +78,13 @@ const Main = () => {
         { id: "completed", label: "Completed" },
       ].map(({ id, label, svg }) => (
         <div key={id}>
-          <div className="relative">
+          <div className="relative mb-4">
             <input
               type="text"
               placeholder={label}
-              className="bg-[#F4F6F8] text-[#858A93] rounded-md py-3 px-9 mb-4"
+              className="bg-[#F4F6F8] text-[#858A93] rounded-md py-3 px-9 w-full"
             />
-            <span className="grid place-content-center absolute rounded shadow-lg-white text-white right-2 top-2 w-9 aspect-square bg-slate-950 mr-4">
+            <span className="grid place-content-center absolute rounded shadow-lg-white text-white right-2 -translate-y-1/2 top-[50%] w-9 h-9 bg-slate-950 mr-1">
               {itemsByCategory[id]?.length ?? 0}
             </span>
           </div>
@@ -93,7 +93,7 @@ const Main = () => {
             <Item className="mb-4" item={item} key={item.id} />
           ))}
 
-          <button className=" flex gap-3 w-full bg-[#F2F4F5] border border-dashed border-[#D5D5D5] rounded-lg text-[#7D8088] py-3 px-16 ml-auto text-sm">
+          <button className="flex justify-center gap-3 w-full text-center bg-[#F2F4F5] border border-dashed border-[#D5D5D5] rounded-lg text-[#7D8088] py-3 ml-auto px-16 text-sm">
             <img src={vector} />
             Add Task
           </button>

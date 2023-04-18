@@ -1,9 +1,9 @@
 import React from "react";
 import image from "../assets/Image.png";
-import View from "../assets/View.svg";
-import board from "../assets/Board.svg";
-import list from "../assets/List.svg";
-import power from "../assets/Power.svg";
+import { ReactComponent as View } from "../assets/View.svg";
+import { ReactComponent as Board } from "../assets/Board.svg";
+import { ReactComponent as List } from "../assets/List.svg";
+import { ReactComponent as Lightning } from "../assets/Lightning.svg";
 import cross from "../assets/Cross.svg";
 
 const SubHeader = () => {
@@ -16,26 +16,24 @@ const SubHeader = () => {
       <ul className="flex ml-auto gap-4 text-[#7D8088] font-light text-sm">
         <li className="hover:text-black duration-500">
           <a href="#" className="flex gap-1 items-center">
-            <img src={View} />
+            <View />
             Participants View
           </a>
         </li>
         <li className="hover:text-black duration-500">
           <a href="#" className="flex gap-1 items-center">
-            <img src={board} />
+            <Board />
             Board View
           </a>
         </li>
         <li className="hover:text-black duration-500">
           <a href="#" className="flex gap-1 items-center">
-            <img src={list} />
-            List View
+            <List /> List View
           </a>
         </li>
         <li className="hover:text-black duration-500">
           <a href="#" className="flex gap-1 items-center">
-            <img src={power} />
-            Power View
+            <Lightning /> Power View
           </a>
         </li>
         <li>
