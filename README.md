@@ -4,6 +4,17 @@ Welcome to my project! This is a campaign dashboard made with Reactjs and Tailwi
 Purpose Of This Project
 The purpose of this projec is to test my Reactjs and Tailwind CSS skills.
 
+Getting Started
+To get started with this project, you need to have a vite.js installed on your computer. you can downloaad their latest version from their official website vitejs.org
+
+Installation
+Once you have vite.js installed, you can clone the repository and install the dependencies by running the following command.
+"npm create vite@latest"
+
+Running The App
+To run the app locally you can use the following command
+"npm run dev"
+
 Sections Maintained
 
 - SideNav component
