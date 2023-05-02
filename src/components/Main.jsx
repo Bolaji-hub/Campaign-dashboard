@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import mark from "../assets/Mark.svg";
 import vector from "../assets/Vector23.svg";
 import comment from "../assets/Vector24.svg";
@@ -59,6 +59,12 @@ const items = [
     linkCount: 2,
   },
 ];
+const tabs = [
+  { id: "to-do", label: "To Do" },
+  { id: "in-progress", label: "InProgress" },
+  { id: "completed", label: "Completed" },
+];
+const onSmallScreen = window.matchMedia("(max-width: 768px)");
 
 const Main = () => {
   const itemsByCategory = useMemo(() =>
@@ -70,36 +76,62 @@ const Main = () => {
     }, {})
   );
 
+  const [currentTab, setCurrentTab] = useState(0);
+  const [isSmallScreen, setIsSmallScreen] = useState(onSmallScreen.matches);
+
+  useEffect(() => {
+    const handleResize = ({ matches }) => setIsSmallScreen(matches);
+    onSmallScreen.addEventListener("change", handleResize);
+
+    return () => onSmallScreen.removeEventListener("change", handleResize);
+  });
+
   return (
-    <main className="container py-16 grid grid-cols-3 gap-6">
-      {[
-        { id: "to-do", label: "To Do" },
-        { id: "in-progress", label: "InProgress" },
-        { id: "completed", label: "Completed" },
-      ].map(({ id, label, svg }) => (
-        <div key={id}>
-          <div className="relative mb-4">
-            <input
-              type="text"
-              placeholder={label}
-              className="bg-[#F4F6F8] text-[#858A93] rounded-md py-3 px-9 w-full"
-            />
-            <span className="grid place-content-center absolute rounded shadow-lg-white text-white right-2 -translate-y-1/2 top-[50%] w-9 h-9 bg-slate-950 mr-1">
-              {itemsByCategory[id]?.length ?? 0}
-            </span>
-          </div>
-
-          {itemsByCategory[id]?.map((item) => (
-            <Item className="mb-4" item={item} key={item.id} />
+    <>
+      {isSmallScreen && (
+        <div className="flex justify-between text-sm bg-[#EBEBEB] rounded py-2 px-4">
+          {tabs.map(({ label, id }, i) => (
+            <button
+              key={id}
+              className={`py-1 px-4 rounded transition-all duration-700${
+                i === currentTab && " bg-gray-600 text-white"
+              }`}
+              onClick={() => setCurrentTab(i)}
+            >
+              {label}
+            </button>
           ))}
-
-          <button className="flex justify-center gap-3 w-full text-center bg-[#F2F4F5] border border-dashed border-[#D5D5D5] rounded-lg text-[#7D8088] py-3 ml-auto px-16 text-sm">
-            <img src={vector} />
-            Add Task
-          </button>
         </div>
-      ))}
-    </main>
+      )}
+      <main className="container py-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+        {tabs.map(
+          ({ id, label, svg }, i) =>
+            (i === currentTab || !isSmallScreen) && (
+              <div key={id}>
+                <div className="relative mb-4">
+                  <input
+                    type="text"
+                    placeholder={label}
+                    className="bg-[#F4F6F8] text-[#858A93] rounded-md py-3 px-9 w-full"
+                  />
+                  <span className="grid place-content-center absolute rounded shadow-lg-white text-white right-2 -translate-y-1/2 top-[50%] w-9 h-9 bg-slate-950 mr-1">
+                    {itemsByCategory[id]?.length ?? 0}
+                  </span>
+                </div>
+
+                {itemsByCategory[id]?.map((item) => (
+                  <Item className="mb-4" item={item} key={item.id} />
+                ))}
+
+                <button className="flex justify-center gap-3 w-full text-center bg-[#F2F4F5] border border-dashed border-[#D5D5D5] rounded-lg text-[#7D8088] py-3 ml-auto px-16 text-sm">
+                  <img src={vector} />
+                  Add Task
+                </button>
+              </div>
+            )
+        )}
+      </main>
+    </>
   );
 };
 

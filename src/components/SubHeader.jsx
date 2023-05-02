@@ -19,7 +19,7 @@ const SubHeader = () => {
         className="rounded-full border border-solid border-white -ml-2 "
       />
       <p className="text-[#B8B9BD] font-light text-sm ml-2 ">8 member</p>
-      <ul className="flex ml-auto gap-4 text-[#7D8088] font-light text-sm">
+      <ul className="hidden md:flex ml-auto gap-4 text-[#7D8088] font-light text-sm">
         <li className="hover:text-black duration-500">
           <a href="#" className="flex gap-1 items-center">
             <View />
