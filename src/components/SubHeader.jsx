@@ -19,27 +19,29 @@ const SubHeader = () => {
         className="rounded-full border border-solid border-white -ml-2 "
       />
       <p className="text-[#B8B9BD] font-light text-sm ml-2 ">8 member</p>
-      <ul className="hidden md:flex ml-auto gap-4 text-[#7D8088] font-light text-sm">
+      <ul className="flex ml-auto gap-4 text-[#7D8088] font-light text-sm">
         <li className="hover:text-black duration-500">
           <a href="#" className="flex gap-1 items-center">
             <View />
-            Participants View
+            <span className=" hidden md:inline">Participants View</span>
           </a>
         </li>
         <li className="hover:text-black duration-500">
           <a href="#" className="flex gap-1 items-center">
             <Board />
-            Board View
+            <span className="hidden md:inline">Board View</span>
           </a>
         </li>
         <li className="hover:text-black duration-500">
           <a href="#" className="flex gap-1 items-center">
-            <List /> List View
+            <List />
+            <span className="hidden md:inline">List View</span>
           </a>
         </li>
         <li className="hover:text-black duration-500">
           <a href="#" className="flex gap-1 items-center">
-            <Power /> Power View
+            <Power />
+            <span className="hidden md:inline">Power View</span>
           </a>
         </li>
         <li>
