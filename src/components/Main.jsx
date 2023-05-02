@@ -89,7 +89,7 @@ const Main = () => {
   return (
     <>
       {isSmallScreen && (
-        <div className="flex justify-between text-sm bg-[#EBEBEB] rounded py-2 px-4">
+        <div className="flex justify-between text-sm  rounded py-2 px-4">
           {tabs.map(({ label, id }, i) => (
             <button
               key={id}
