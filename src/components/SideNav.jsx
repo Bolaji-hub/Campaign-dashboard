@@ -11,7 +11,7 @@ import plus from "../assets/Plus.svg";
 const SideNav = ({ isNavOpen }) => {
   return (
     <nav
-      className={`min-h-screen p-4 bg-[#1D1042] w-70 text-white fixed z-20 md:sticky top md:left-0 top-0 flex-col transition-all ${
+      className={`min-h-screen p-4 bg-[#1D1042] w-70 text-white flex fixed z-20 md:sticky top md:left-0 top-0 flex-col transition-all ${
         isNavOpen ? "left-0" : "left-[-100vw]"
       }`}
     >
