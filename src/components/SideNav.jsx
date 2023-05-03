@@ -23,7 +23,7 @@ const SideNav = ({ isNavOpen }) => {
         <li>
           <a
             href="#"
-            className="flex gap-2 p-4 hover:text-black duration-500 text-sm "
+            className="flex gap-2 mt-4 p-4 hover:text-black duration-500 text-sm "
           >
             <img src={Vector} />
             Dashboard
